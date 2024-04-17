@@ -27,7 +27,7 @@ const sendPersonalSign = async (provider: SDKProvider, message: string) => {
     return sign;
   } catch (err) {
     console.log(err);
-    return "Error: " + err.message;
+    return "Error: " + (err as any).message;
   }
 };
 
